@@ -1,0 +1,15 @@
+class Solution {
+public:
+    bool isSubsequence(string s, string t) {
+        int szs=s.size();
+        int szt=t.size();
+        int ptrs=0;
+
+        for(int i=0;i<szt && ptrs<szs;++i){
+            if(s[ptrs]==t[i]){
+                ++ptrs;
+            }
+        }
+        return (ptrs==szs);
+    }
+};
